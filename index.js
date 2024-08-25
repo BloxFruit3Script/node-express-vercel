@@ -1,13 +1,15 @@
 // Import packages
 const express = require("express");
-const home = require("./routes/home");
+const fluxus = require("./routes/fluxus");
+const delta = require("./routes/delta");
 
 // Middlewares
 const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/home", home);
+app.use("/fluxus", fluxus);
+app.use("/delta", delta);
 
 // connection
 const port = process.env.PORT || 9001;
