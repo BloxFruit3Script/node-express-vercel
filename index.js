@@ -1,8 +1,7 @@
 // Import packages
 const express = require("express");
 const fluxus = require("./routes/fluxus");
-const delta = require("./routes/delta");
-const relz = require("./routes/relz");
+const cryptic = require("./routes/cryptic");
 
 // Middlewares
 const app = express();
@@ -10,8 +9,7 @@ app.use(express.json());
 
 // Routes
 app.use("/fluxus", fluxus);
-app.use("/delta", delta);
-app.use("/relz", relz);
+app.use("/cryptic", cryptic);
 
 // connection
 const port = process.env.PORT || 9001;
